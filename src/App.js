@@ -5,6 +5,8 @@ import { useEffect, useState } from "react";
 import Agent from "./components/Agent";
 import Header from "./components/Header";
 import Home from "./pages/Home";
+import Agents from "./pages/Agents";
+import { Route, Routes } from "react-router-dom";
 
 function App() {
   const [agent, setAgent] = useState([]);
@@ -36,9 +38,14 @@ function App() {
 
   return (
     <>
-      <Header></Header>
-      {/* <ul>{agents}</ul> */}
-      <Home portrait={agentPortrait}></Home>
+      <Header />
+      <Routes>
+        <Route
+          path="/"
+          element={<Home portrait={agentPortrait}></Home>}
+        ></Route>
+        <Route path="/agents" element={<Agents></Agents>}></Route>
+      </Routes>
     </>
   );
 }
