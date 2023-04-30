@@ -7,6 +7,7 @@ import Header from "./components/Header";
 import Home from "./pages/Home";
 import Agents from "./pages/Agents";
 import { Route, Routes } from "react-router-dom";
+import Esport from "./pages/Esport";
 
 function App() {
   const [agent, setAgent] = useState([]);
@@ -45,6 +46,8 @@ function App() {
           element={<Home portrait={agentPortrait}></Home>}
         ></Route>
         <Route path="/agents" element={<Agents></Agents>}></Route>
+        <Route path="/agents" element={<Agents></Agents>}></Route>
+        <Route path="/esport" element={<Esport />}></Route>
       </Routes>
     </>
   );

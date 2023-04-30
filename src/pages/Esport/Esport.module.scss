@@ -1,0 +1,44 @@
+.root{
+    color: white;
+    display: flex;
+    flex-direction: column;
+
+    & li{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        height: 70px;
+        text-align: center;
+        position: relative;
+        margin-bottom: 20px;
+        border-bottom: 1px solid rgb(139, 146, 156);
+        border-right: 1px solid rgb(139, 146, 156);
+        border-top: 1px solid rgb(139, 146, 156);
+
+        &::before{
+            content: "";
+            display: block;
+            height: 70px;
+            width: 6px;
+            background-color: rgb(255, 70, 85);
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+
+        & div{
+            height: 20px;
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            background-color: rgb(39, 50, 55);
+
+            & span{
+                width: 50px;
+            }
+        }
+
+        
+    }
+}
+

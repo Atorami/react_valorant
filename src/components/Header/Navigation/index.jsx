@@ -1,9 +1,5 @@
 import { Link } from "react-router-dom";
 import styles from "./Navigation.module.scss";
-import Home from "../../../pages/Home";
-import Agents from "../../../pages/Agents";
-import Lineups from "../../../pages/Lineups";
-import Esport from "../../../pages/Esport";
 
 const Navigation = () => {
   return (

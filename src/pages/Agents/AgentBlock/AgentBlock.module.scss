@@ -1,0 +1,26 @@
+.root{
+    height: 100px;
+    width: 230px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border: 1px solid rgb(139, 146, 156);
+    border-top-right-radius: 10px;
+    background-color: rgb(10,13,17);
+    color: white;
+    cursor: pointer;
+    transition: all .2s ease-in;
+
+    &:hover{
+        transform: scale(1.1);
+    }
+
+    & img{
+        height: 100px;
+        width: 100px;
+    }
+
+    & h2{
+        margin-right: 10px;
+    }
+}
