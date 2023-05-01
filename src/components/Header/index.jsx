@@ -9,8 +9,8 @@ const Header = () => {
   return (
     <div className={styles.root}>
       <Logo />
-      <Navigation></Navigation>
-      <Search></Search>
+      <Navigation />
+      <Search />
       {/* <Profile></Profile> */}
     </div>
   );

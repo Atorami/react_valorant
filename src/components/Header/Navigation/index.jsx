@@ -16,6 +16,12 @@ const Navigation = () => {
       <li>
         <Link to="/esport">Esport</Link>
       </li>
+      <li>
+        <Link to="/matches">Matches</Link>
+      </li>
+      <li>
+        <Link to="/test">Test</Link>
+      </li>
     </ul>
   );
 };

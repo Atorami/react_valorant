@@ -1,18 +1,15 @@
 import styles from "./Home.module.scss";
+import ReactPlayer from "react-player";
 
-const Home = (props) => {
+const Home = () => {
   return (
     <div className={styles.root}>
-      <div
-        style={{ backgroundImage: `url(${props.portrait})` }}
-        className={styles.container}
-      >
-        <h3 className="subtitle"></h3>
-        <h2 className="title"></h2>
-        <h3 className="roletitle"></h3>
-
-        <p className="descr"></p>
-      </div>
+      <ReactPlayer
+        url="https://assets.contentstack.io/v3/assets/bltb6530b271fddd0b1/blt778f65cedfee54fd/63bcad5b08dfb21202a7794d/VAL_Ep6_Homepage-CG-Video_V5.mp4"
+        loop="true"
+        playing="true"
+        className={styles.player}
+      ></ReactPlayer>
     </div>
   );
 };

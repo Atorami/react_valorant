@@ -1,5 +1,15 @@
 .root{
     height: 700px;
+    position: relative;
+
+    & .player{
+        display: block;
+        position: absolute;
+        top: 0;
+        right: 0;
+        height: 700px;
+        width: 100%;
+    }
 }
 
 .container{

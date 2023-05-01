@@ -1,13 +1,18 @@
 import "./scss/app.scss";
+
+import { Route, Routes } from "react-router-dom";
 import axios from "axios";
 import { URL } from "./api/api";
 import { useEffect, useState } from "react";
+
 import Agent from "./components/Agent";
 import Header from "./components/Header";
+
 import Home from "./pages/Home";
 import Agents from "./pages/Agents";
-import { Route, Routes } from "react-router-dom";
 import Esport from "./pages/Esport";
+import Matches from "./pages/Matches";
+import Test from "./pages/Test";
 
 function App() {
   const [agent, setAgent] = useState([]);
@@ -48,6 +53,8 @@ function App() {
         <Route path="/agents" element={<Agents></Agents>}></Route>
         <Route path="/agents" element={<Agents></Agents>}></Route>
         <Route path="/esport" element={<Esport />}></Route>
+        <Route path="/matches" element={<Matches />}></Route>
+        <Route path="/test" element={<Test />}></Route>
       </Routes>
     </>
   );
