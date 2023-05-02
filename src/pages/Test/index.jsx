@@ -1,5 +1,5 @@
 import { useDispatch, useSelector } from "react-redux";
-import { getPosts, addPost } from "../../redux/slices/testSlice";
+import { getPosts, addPost, deletePost } from "../../redux/slices/testSlice";
 
 import styles from "./Test.module.scss";
 import { useState } from "react";
@@ -11,17 +11,20 @@ const Test = () => {
 
   const [postTitle, setPostTitle] = useState("");
   const [postText, setPostText] = useState("");
+  const [postId, setPostId] = useState(1);
 
   const handleSubmit = (e) => {
     e.preventDefault();
 
     const newPost = {
+      postId: postId,
       postTitle: postTitle,
       postText: postText,
     };
 
     dispatch(addPost(newPost));
 
+    setPostId(postId + 1);
     setPostTitle("");
     setPostText("");
   };
@@ -56,8 +59,12 @@ const Test = () => {
           {posts.lenght !== 0 ? (
             posts.map((val) => (
               <li>
+                <span>{val.postId}</span>
                 <h2>{val.postTitle}</h2>
                 <p>{val.postText}</p>
+                <button onClick={() => dispatch(deletePost(val.postId))}>
+                  X
+                </button>
               </li>
             ))
           ) : (
