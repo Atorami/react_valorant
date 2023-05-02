@@ -3,6 +3,7 @@ import { getPosts, addPost } from "../../redux/slices/testSlice";
 
 import styles from "./Test.module.scss";
 import { useState } from "react";
+import axios from "axios";
 
 const Test = () => {
   const dispatch = useDispatch();
@@ -24,6 +25,7 @@ const Test = () => {
     setPostTitle("");
     setPostText("");
   };
+
   return (
     <div className={styles.root}>
       <form onSubmit={handleSubmit}>
@@ -38,7 +40,7 @@ const Test = () => {
         </div>
         <div>
           <label htmlFor="postText">Post Text</label>
-          <input
+          <textarea
             type="text"
             id="postText"
             value={postText}
@@ -49,10 +51,15 @@ const Test = () => {
         <button type="submit">POST</button>
       </form>
 
-      <div className="test-list">
+      <div className={styles.posts}>
         <ul>
           {posts.lenght !== 0 ? (
-            posts.map((val) => <li>{val.postTitle}</li>)
+            posts.map((val) => (
+              <li>
+                <h2>{val.postTitle}</h2>
+                <p>{val.postText}</p>
+              </li>
+            ))
           ) : (
             <li>Posts not found</li>
           )}

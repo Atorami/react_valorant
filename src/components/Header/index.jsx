@@ -8,10 +8,12 @@ import { ReactComponent as Logo } from "../../assets/icons/icon-valorant.svg";
 const Header = () => {
   return (
     <div className={styles.root}>
-      <Logo />
-      <Navigation />
-      <Search />
-      {/* <Profile></Profile> */}
+      <div className={styles.container}>
+        <Logo />
+        <Navigation />
+        <Search />
+        {/* <Profile></Profile> */}
+      </div>
     </div>
   );
 };

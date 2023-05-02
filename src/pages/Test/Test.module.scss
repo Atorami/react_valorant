@@ -1,8 +1,66 @@
 .root{
     color: white;
     display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    margin-top: 200px;
+    flex-direction: row;
+    justify-content: start;
+    margin-left: 100px;
+    margin-top: 50px;
+
+    & form{
+        height: 300px;
+        width: 800px;
+        border: 1px solid white;
+        border-radius: 20px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-right: 100px;
+
+        & div{
+            & label{
+                margin-right: 50px;
+                margin-left: 20px;
+            }
+            & input {
+                width: 500px;
+                height: 30px;
+                border: none;
+                border-radius: 20px;
+                margin-top: 30px;
+                padding: 0 20px;
+                outline: none;
+            }
+            & textarea{
+                width: 500px;
+                height: 100px;
+                border: none;
+                border-radius: 20px;
+                margin-top: 20px;
+                padding: 10px 20px;
+                outline: none;
+
+                & :focus{
+                    border: 1px solid green
+                }
+            }
+        }
+
+        & button{
+            margin-top: 20px;
+            width: 200px;
+            height: 50px;
+        }
+    }
+}
+
+.posts{
+    & ul{
+        & li{
+            width: 700px;
+            border: 1px solid white;
+            margin-top: 20px;
+            border-top-right-radius: 20px;
+            padding: 10px;
+        }
+    }
 }
